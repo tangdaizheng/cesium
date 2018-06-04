@@ -619,7 +619,7 @@ gulp.task('test', function(done) {
     var failTaskOnError = argv.failTaskOnError ? argv.failTaskOnError : false;
     var suppressPassed = argv.suppressPassed ? argv.suppressPassed : false;
 
-    var browsers = ['Chrome'];
+    var browsers = ['ChromeHeadless'];
     if (argv.browsers) {
         browsers = argv.browsers.split(',');
     }
