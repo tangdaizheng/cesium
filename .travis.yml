@@ -19,7 +19,7 @@ script:
 
   - echo 'test webgl-stub' && echo -en 'travis_fold:start:script.test\\r'
   - npm run build
-  - npm run test -- --browsers ChromeHeadless --webgl-stub --failTaskOnError --suppressPassed
+  - npm run test -- --browsers ChromeCI --webgl-stub --failTaskOnError --suppressPassed
   - echo -en 'travis_fold:end:script.test\\r'
 
   - echo 'makeZipFile' && echo -en 'travis_fold:start:script.makeZipFile\\r'
@@ -38,7 +38,7 @@ script:
   - echo -en 'travis_fold:end:script.deploy\\r'
 
   - echo 'test webgl-stub release' && echo -en 'travis_fold:start:script test.release\\r'
-  - npm run test -- --browsers ChromeHeadless --failTaskOnError --webgl-stub --release --suppressPassed
+  - npm run test -- --browsers ChromeCI --failTaskOnError --webgl-stub --release --suppressPassed
   - echo -en 'travis_fold:end:script test.release\\r'
 
   - echo 'test node' && echo -en 'travis_fold:start:script test.node\\r'
