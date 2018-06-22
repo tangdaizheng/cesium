@@ -62,14 +62,17 @@ module.exports = function(config) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers : ['ChromeHeadless'],
+        browsers : ['Chrome'],
 
         //In Travis, we need to run with the no-sandbox flag
         customLaunchers: {
             ChromeCI: {
-                base: 'ChromeHeadless',
+                base: 'Chrome',
                 flags: [
-                    '--no-sandbox'
+                    '--headless',
+                    '--hide-scrollbars',
+                    '--mute-audio',
+                    ' --remote-debugging-port=9222'
                 ]
             }
         },
